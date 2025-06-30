@@ -1,0 +1,8 @@
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <input formControlName="sku" placeholder="SKU" /><br />
+  <input formControlName="name" placeholder="Product Name" /><br />
+  <input formControlName="price" type="number" placeholder="Price" /><br />
+  <input type="file" multiple (change)="onFileChange($event)" /><br />
+  <button type="submit">{{ isEdit ? 'Update' : 'Add' }} Product</button>
+</form>
